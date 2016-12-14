@@ -73,6 +73,62 @@ class EventsControllerEvent extends EventsController
 						$result->end_time = date('H:i', $end);
 					}
 				} else {
+					$result = false;
+				}
+			}
+
+			$layout = new JLayoutFile('events.event.modal');
+
+			$html = $layout->render($result);
+
+			echo $html;
+		}
+		catch(Exception $e)
+		{
+			echo $e;
+		}
+
+		$app->close();
+	}
+
+	public function dataJson()
+	{
+		$app = JFactory::getApplication();
+
+		header('Content-Type: application/json');
+
+		try
+		{
+			$event_id = (int) $app->input->get('id', false, 'INT');
+
+			if(empty($event_id)) {
+				$result = array();
+			} else {
+				$result = $this->getModel()->getEvent($event_id);
+
+				if(!empty($result)) {
+					$start = $app->input->get('s');
+					if(!empty($start)) {
+						$start = strtotime($start);
+						$result->start_date = date('d.m.Y', $start);
+						$result->start_time = date('H:i', $start);
+					} else {
+						$start = strtotime($result->start_date);
+						$result->start_date = date('d.m.Y', $start);
+						$result->start_time = date('H:i', $start);
+					}
+					
+					$end   = $app->input->get('e');
+					if(!empty($end)) {
+						$end   = strtotime($end);
+						$result->end_date = date('d.m.Y', $end);
+						$result->end_time = date('H:i', $end);
+					} else {
+						$end   = strtotime($result->end_date);
+						$result->end_date = date('d.m.Y', $end);
+						$result->end_time = date('H:i', $end);
+					}
+				} else {
 					$result = new StdClass();
 				}
 			}

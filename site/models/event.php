@@ -37,7 +37,6 @@ class EventModelEvent extends JModelList
 		$query->from($db->quoteName('#__events_items', 'a'));
 		$query->where($db->quoteName('a.id') . ' = '. $db->quote($id));
 		$query->where($db->quoteName('a.state') . ' = '. $db->quote(1));
-		$query->where($db->quoteName('a.override_event') . ' = '. $db->quote(0));
 		$query->join('LEFT', '`#__events_categories` AS `c` ON `c`.`id` = a.`category`');
 		$query->setLimit(1);
 

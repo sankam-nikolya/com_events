@@ -1453,3 +1453,17 @@ be a descendant of the grid when it is being dragged.
 		height: 100% !important;
 	}
 }
+
+.event-modal-header {
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+
+.event-date > div {
+	margin-bottom: 5px;
+}
+
+.event-date,
+.event-address {
+	margin-bottom: 10px;
+}

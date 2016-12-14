@@ -79,17 +79,21 @@ $script = "
 					$.ajax({
 						type: 'POST',
 						cache: false,
-						dataType: 'json',
+						dataType: 'html',
 						data: data,
 						url: 'index.php?option=com_events&task=event.data',
 						success: function (data) {
-							
+							$('body').append(data);
+							$('#eventModal').modal('show');
 						},
 						error: function(data) {
 							alert('" . JText::_('COM_EVENTS_ERROR_LOADING_EVENT') . "');
 						}
 					});
 				}
+			});
+			$(document).on('hidden.bs.modal', '#eventModal', function (event) {
+				$('#systemFeedbckFromModal').remove();
 			});
 		});
 	})(jQuery);
