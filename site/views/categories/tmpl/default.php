@@ -90,7 +90,7 @@ $script = "
 				}
 			});
 			$(document).on('hidden.bs.modal', '#eventModal', function (event) {
-				$('#systemFeedbckFromModal').remove();
+				$('#eventModal').remove();
 			});
 		});
 	})(jQuery);
