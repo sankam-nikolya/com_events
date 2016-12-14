@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_EVENTS_TITLE_LIST_VIEW_CATEGORIES" option="View">
+		<message>
+			<![CDATA[COM_EVENTS_TITLE_LIST_VIEW_CATEGORIES_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/components/com_events/models/fields">
+			<field name="type" 
+				type="list" 
+				required="true"
+				label="COM_EVENTS_VIEW_TYPE_LBL" 
+				description="COM_EVENTS_VIEW_TYPE_DESC"
+				hint="COM_EVENTS_VIEW_TYPE_HINT">
+				<option value="day">COM_EVENTS_VIEW_TYPE_DAY</option>
+				<option value="week">COM_EVENTS_VIEW_TYPE_WEEK</option>
+				<option value="month">COM_EVENTS_VIEW_TYPE_MONTH</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>

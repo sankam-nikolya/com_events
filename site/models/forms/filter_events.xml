@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" hint="COM_EVENTS_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="category" type="sql" query="SELECT '' AS `id`, 'COM_EVENTS_EVENTS_CATEGORY_FILTER' AS `val` UNION SELECT `id`, `name` AS val FROM `#__banners`" key_field="id" value_field="val" class="inputbox" onchange="this.form.submit()" translate="true"/>
+<field name="repeatable" type="list" onchange="this.form.submit();">
+  <option value="">---</option>
+  <option value="1">COM_EVENTS_EVENTS_REPEATABLE_OPTION_1</option>
+  <option value="2">COM_EVENTS_EVENTS_REPEATABLE_OPTION_2</option>
+</field>
+<field name="recurrence_type" type="list" onchange="this.form.submit();">
+  <option value="">---</option>
+  <option value="daily">COM_EVENTS_EVENTS_RECURRENCE_TYPE_OPTION_DAILY</option>
+  <option value="weekly">COM_EVENTS_EVENTS_RECURRENCE_TYPE_OPTION_WEEKLY</option>
+  <option value="monthly">COM_EVENTS_EVENTS_RECURRENCE_TYPE_OPTION_MONTHLY</option>
+  <option value="yearly">COM_EVENTS_EVENTS_RECURRENCE_TYPE_OPTION_YEARLY</option>
+</field>
+
+
+    </fields>
+</form>

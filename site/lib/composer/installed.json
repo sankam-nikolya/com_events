@@ -1,0 +1,98 @@
+[
+    {
+        "name": "plummer/calendarful",
+        "version": "v0.2.1",
+        "version_normalized": "0.2.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/benplummer/calendarful.git",
+            "reference": "a58317832b32bf321fe8d04d42ac3c4526488649"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/benplummer/calendarful/zipball/a58317832b32bf321fe8d04d42ac3c4526488649",
+            "reference": "a58317832b32bf321fe8d04d42ac3c4526488649",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.3.0"
+        },
+        "require-dev": {
+            "mockery/mockery": "0.9.*",
+            "phpunit/phpunit": "4.3.*"
+        },
+        "time": "2016-01-10 13:09:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "Plummer\\Calendarful\\": [
+                    "src",
+                    "tests"
+                ]
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ben Plummer",
+                "email": "ben@benplummer.co.uk",
+                "role": "Developer"
+            }
+        ],
+        "description": "Calendar generator that allows for recurring events.",
+        "homepage": "http://benplummer.co.uk",
+        "keywords": [
+            "calendar",
+            "events",
+            "recurrence"
+        ]
+    },
+    {
+        "name": "jasonlewis/expressive-date",
+        "version": "v1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/jasonlewis/expressive-date.git",
+            "reference": "1215d093fd3fe222e26629e0bc3885968ba88a01"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/jasonlewis/expressive-date/zipball/1215d093fd3fe222e26629e0bc3885968ba88a01",
+            "reference": "1215d093fd3fe222e26629e0bc3885968ba88a01",
+            "shasum": ""
+        },
+        "require": {
+            "php": ">=5.2.0"
+        },
+        "time": "2013-05-17 23:22:57",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "classmap": [
+                "src"
+            ]
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-2-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Jason Lewis",
+                "email": "jason.lewis1991@gmail.com",
+                "homepage": "http://jasonlewis.me",
+                "role": "Creator"
+            }
+        ],
+        "description": "A fluent extension to PHPs DateTime class.",
+        "keywords": [
+            "date",
+            "time"
+        ]
+    }
+]

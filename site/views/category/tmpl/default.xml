@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="COM_EVENTS_TITLE_ITEM_VIEW_CATEGORY" option="View">
+		<message>
+			<![CDATA[COM_EVENTS_TITLE_ITEM_VIEW_CATEGORY_DESC]]>
+		</message>
+	</layout>
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/components/com_events/models/fields">
+			<field name="id" 
+				type="foreignkey" 
+				label="COM_EVENTS_FORM_LBL_EVENT_CATEGORY" 
+				description="COM_EVENTS_FORM_DESC_EVENT_CATEGORY" 
+				class="inputbox" 
+				where="`state` = 1"
+				input_type="list" 
+				table="#__events_categories" 
+				key_field="id" 
+				value_field="title" 
+				required="true"/>
+			<field name="type" 
+				type="list" 
+				required="true"
+				label="COM_EVENTS_VIEW_TYPE_LBL" 
+				description="COM_EVENTS_VIEW_TYPE_DESC"
+				hint="COM_EVENTS_VIEW_TYPE_HINT">
+				<option value="day">COM_EVENTS_VIEW_TYPE_DAY</option>
+				<option value="week">COM_EVENTS_VIEW_TYPE_WEEK</option>
+				<option value="month">COM_EVENTS_VIEW_TYPE_MONTH</option>
+			</field>
+		</fieldset>
+	</fields>
+</metadata>
